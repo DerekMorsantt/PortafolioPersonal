@@ -1,0 +1,15 @@
+body {
+    background-image: url('../wallpaper/3969\ 1.svg') ;
+    z-index: -1;
+    margin: auto;
+  }
+  .contact {
+    z-index: 1;
+    font-size: 41px;
+    color: #FFFFFF;
+    font-family: 'Bebas Neue', sans-serif;
+    display: flex;
+    justify-content: end;
+    padding: 0 4rem;
+    margin-top: 3rem;
+  }
