@@ -84,16 +84,13 @@ height: auto;
 
 .apps {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   position: absolute;
-  left: 50%;                     /* llevamos el punto de referencia al centro */
-  bottom: -5rem;                  /* ajusta este valor hasta dejarlo a la altura que quieras */
-  transform: translateX(-50%);   /* lo desplazamos la mitad de su ancho hacia atrás */
+  left: 3%; 
   z-index: 2;
-  gap: 2rem;                     /* espacio entre íconos */
-  /* ¡OJO! Eliminamos width: 45px y height: 45px aquí */
+  gap: 2rem; 
+top: -10%;
 }
-
 /* Si necesitas que cada ícono tenga un tamaño de 45×45, hazlo en el selector de cada imagen: */
 .apps img {
   width: 45px;
@@ -173,4 +170,23 @@ height: auto;
   width: 80%;             /* ocupa el 80% del ancho de su contenedor padre */
   max-width: 881px;       /* nunca crece más de 881px en pantallas grandes  */
   height: 17rem;           /* mantiene la proporción */
+}
+
+.enter {
+    position: absolute;
+  left: 5%;
+  bottom: 0; /* o el valor que necesites */
+  transform: translateX(-50%);
+  z-index: 2;
+  width: 90px;
+  height: 126px;
+}
+
+.scroll {
+    position: absolute;
+  right: 4%;
+  bottom: 0; /* o el valor que necesites */
+  z-index: 2;
+  width: 90px;
+  height: 126px;
 }
