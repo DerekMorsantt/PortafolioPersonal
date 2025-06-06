@@ -1,8 +1,34 @@
 body {
-    background-image: url('../wallpaper/3969\ 1.svg') ;
-    z-index: -1;
-    margin: auto;
-  }
+  position: relative;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Fondo fijo que no se mueve con el contenido */
+body::before,
+body::after {
+  content: "";
+  position: fixed; /* Cambiado a fixed para que sea independiente del scroll */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body::before {
+  background-image: url('../wallpaper/space\ background.svg');
+  background-size: cover;
+  background-position: center;
+  z-index: -2;
+  opacity: 1;
+}
+
+body::after {
+  background: rgba(29, 29, 44, 0.85);
+  z-index: -1;
+}
   .contact {
     z-index: 1;
     font-size: 41px;
@@ -13,3 +39,128 @@ body {
     padding: 0 4rem;
     margin-top: 3rem;
   }
+
+
+  .message {
+    z-index: 1;
+    width: 303px;
+    height: 124px;
+    margin: auto;
+    margin-top: 1rem;
+    width: 100%;         
+  max-width: 303px;   
+  height: auto;
+  padding: 0 1rem;
+  }
+
+  .skill {
+  width: 561px;
+  height: 60px;
+  display: flex;
+  margin: auto;
+  margin-top: 6rem;
+}
+
+
+.earth1 {
+  position: relative;
+  width: 100%;
+  height: 550px;
+  overflow: visible;
+  z-index: 0;
+}
+
+/* La tierra se pega al fondo de su contenedor */
+.earth {
+  position: absolute;
+  bottom: 0; /* <- ahora se pega bien al fondo del .earth1 */
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  z-index: 1;
+}
+
+.apps {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 3%; 
+  z-index: 2;
+  gap: 2rem; 
+top: 28%;
+}
+
+.apps img {
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.apps img:hover {
+  transform: scale(1.1);
+}
+
+.enter {
+  position: absolute;
+  left: 3%;
+  bottom: 2rem;
+  z-index: 2;
+  width: 90px;
+  height: 126px;
+}
+
+.scroll {
+  position: absolute;
+  right: 4%;
+  bottom: 2rem;
+  z-index: 2;
+  width: 90px;
+  height: 126px;
+}
+
+.skills-section {
+  text-align: center;
+  color: #fff;
+  padding: 0;
+  position: absolute;  /* <-- cambia de relative a absolute */
+  bottom: 4rem;         /* <-- ajusta hasta que toque la tierra */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;           /* encima del planeta y astronauta */
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.skills-grid img {
+  width: 214px; /* ajusta según el tamaño real de tus SVG */
+  height: auto;
+}
+
+.skills-grid a {
+  grid-column: span 2;
+  display: flex;
+  justify-content: center;
+}
+
+.skills-grid .proyecto {
+  width: 445px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out; /* transicion suave */
+  display: block;
+  margin: auto; /* centra dentro del grid */
+}
+
+.proyecto:hover {
+  transform: scale(1.1);
+}

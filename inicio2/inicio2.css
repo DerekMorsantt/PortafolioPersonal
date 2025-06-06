@@ -1,8 +1,34 @@
 body {
-    background-image: url('../wallpaper/bgspace1.svg') ;
-    z-index: -1;
-    margin: auto;
-  }
+  position: relative;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Fondo fijo que no se mueve con el contenido */
+body::before,
+body::after {
+  content: "";
+  position: fixed; /* Cambiado a fixed para que sea independiente del scroll */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body::before {
+  background-image: url('../wallpaper/bgspace1.svg');
+  background-size: cover;
+  background-position: center;
+  z-index: -2;
+  opacity: 1;
+}
+
+body::after {
+  background: rgba(29, 29, 44, 0.85);
+  z-index: -1;
+}
 
   .message {
     z-index: 1;
@@ -10,10 +36,10 @@ body {
     height: 133px;
     margin: auto;
     margin-top: 1rem;
-    width: 100%;          /* La imagen ocupa todo el ancho disponible del contenedor */
-max-width: 894px;    /* Pero nunca se hace más grande de este tamaño */
-height: auto;
-padding: 0 1rem;
+    width: 100%;         
+  max-width: 894px;   
+  height: auto;
+  padding: 0 1rem;
   }
 
   .contact {
@@ -28,21 +54,17 @@ padding: 0 1rem;
   }
 
 .derek {
-  width: 239px;
+  width: 289px;
   height: 67px;
   display: flex;
   margin: auto;
   margin-top: 6rem;
-  width: 100%;          /* La imagen ocupa todo el ancho disponible del contenedor */
-max-width: 239px;    /* Pero nunca se hace más grande de este tamaño */
-height: auto;
 }
-
 
 .earth1 {
   position: relative;
   width: 100%;
-  height: 500px; /* Altura visible del contenedor, ajusta según necesites */
+  height: 550px; 
   overflow: visible;
 }
 
@@ -81,7 +103,6 @@ height: auto;
   font-family: 'Montserrat', sans-serif;
 }
 
-
 .apps {
   display: flex;
   flex-direction: column;
@@ -91,7 +112,7 @@ height: auto;
   gap: 2rem; 
 top: -10%;
 }
-/* Si necesitas que cada ícono tenga un tamaño de 45×45, hazlo en el selector de cada imagen: */
+
 .apps img {
   width: 45px;
   height: 45px;
@@ -99,83 +120,47 @@ top: -10%;
   transition: transform 0.3s ease;
 }
 
-/* Ejemplo de hover (opcional) */
 .apps img:hover {
   transform: scale(1.1);
 }
 
-/* -----------------------------
-   Texto principal (.txt) y
-   Texto secundario (.txt1)
-   ----------------------------- */
 .txt,
 .txt1 {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
   z-index: 3;
-
-  /* 1) El contenedor nunca ocupará más del 80% del ancho padre,
-       y se adapta automáticamente cuando la pantalla es pequeña: */
   width: 71%;
-  max-width: 600px;      /* sigue sin superar 600px en pantallas grandes */
+  max-width: 600px;  
   text-align: center;
   color: #FFFFFF;
   font-family: 'Montserrat', sans-serif;
-
-  /* 2) Tamaño de fuente responsivo: */
-  /*   - En pantallas muy estrechas, 1rem (≈16px) es el mínimo
-       - Al crecer, 1.5vw hace la fuente proporcional al ancho 
-       - Ya en tamaños grandes, no pasa de 1.4rem (≈22px) */
   font-size: clamp(1rem, 1.5vw, 1.4rem);
 }
 
-/* Ajusta la posición vertical según la separación que quieras */
 .txt {
-  bottom: 14%;  /* Ejemplo: 12% de la altura del padre */
+  bottom: 12%;  
 }
 
 .txt1 {
-  bottom: -20%;   /* Ejemplo: 6% de la altura del padre */
+  bottom: -20%;   
 }
-
-/* ----------------------------------------
-   Media Query adicional (opcional)
-   para pantallas súper pequeñas (<400px)
-   ---------------------------------------- */
-@media (max-width: 400px) {
-  .txt,
-  .txt1 {
-    width: 90%;            /* ocupará más porcentaje en móviles muy pequeños */
-    font-size: 0.8rem;     /* fuerza un tamaño aún más pequeño si hace falta */
-  }
-
-  .txt {
-    bottom: 10%;
-  }
-  .txt1 {
-    bottom: 4%;
-  }
-}
-
 
 .btn {
   position: absolute;
   left: 50%;
-  bottom: -3%;            /* ahora está a “−3%” del fondo del padre (en vez de rem fijo) */
+  bottom: -3%;           
   transform: translateX(-50%);
   z-index: 2;
-
-  /* en lugar de width: 881px;   */
-  width: 80%;             /* ocupa el 80% del ancho de su contenedor padre */
-  max-width: 881px;       /* nunca crece más de 881px en pantallas grandes  */
-  height: 17rem;           /* mantiene la proporción */
+  width: 80%;         
+  max-width: 881px;    
+  height: 17rem;    
 }
 
 .enter {
     position: absolute;
   left: 5%;
-  bottom: 0; /* o el valor que necesites */
+  bottom: -2rem; 
   transform: translateX(-50%);
   z-index: 2;
   width: 90px;
@@ -185,7 +170,7 @@ top: -10%;
 .scroll {
     position: absolute;
   right: 4%;
-  bottom: 0; /* o el valor que necesites */
+  bottom: -2rem; 
   z-index: 2;
   width: 90px;
   height: 126px;
