@@ -1,33 +1,33 @@
-body {
-  position: relative;
-  min-height: 100vh;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
+ body {
+    position: relative;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
 
 /* Fondo fijo que no se mueve con el contenido */
 body::before,
 body::after {
-  content: "";
-  position: fixed; /* Cambiado a fixed para que sea independiente del scroll */
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 body::before {
-  background-image: url('../wallpaper/3969\ 1.svg');
-  background-size: cover;
-  background-position: center;
-  z-index: -2;
-  opacity: 1;
+    background-image: url('../wallpaper/3969\ 1.svg');
+    background-size: cover;
+    background-position: center;
+    z-index: -2;
+    opacity: 1;
 }
 
 body::after {
-   background: rgba(40, 30, 70, 0.5);
-  z-index: -1;
+    background: rgba(40, 30, 70, 0.5);
+    z-index: -1;
 }
 
 .contact {
@@ -47,8 +47,8 @@ body::after {
 }
 
 .message-container {
-    position: fixed; /* Fijo */
-    top: 8rem; /* Ajusta según necesidad */
+    position: fixed;
+    top: 8rem;
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;
@@ -65,13 +65,13 @@ body::after {
 }
 
 .derek-container {
-    position: fixed; /* Fijo */
-    top: 20rem; /* Debajo del mensaje */
+    position: fixed;
+    top: 20rem;
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;
     width: 100%;
-    max-width: 365px;
+    max-width: 440px;
     height: auto;
 }
 
@@ -109,12 +109,6 @@ body::after {
     z-index: 2;
     width: 249px;
     height: 168px;
-    transition: transform 0.3s ease;
-    cursor: pointer;
-}
-
-.btn:hover {
-    transform: translateX(-50%) scale(1.1); 
 }
 
 .enter {
@@ -133,11 +127,10 @@ body::after {
     z-index: 2;
     width: 90px;
     height: 126px;
-}
-
+   }
 
 .flecha {
-      position: absolute;
+    position: absolute;
     right: 2%;
     top: 45%;
     transform: translateX(-50%);
@@ -153,7 +146,7 @@ body::after {
 }
 
 .flecha1 {
-      position: absolute;
+    position: absolute;
     left: 4%;
     top: 45%;
     transform: translateX(-50%);
@@ -166,4 +159,52 @@ body::after {
 
 .flecha1:hover {
     transform: translateX(-50%) scale(1.1); 
+}
+
+.text-container {
+    position: absolute;
+    bottom: 9%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    width: 71%;
+    max-width: 600px;  
+    text-align: center;
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(1rem, 1.5vw, 1.4rem);
+}
+
+.txt {
+    margin-bottom: 1rem;
+}
+
+.txt1 {
+    color: #FFFFFF;
+    font-weight: bold;
+    display: inline-block;
+    transition: transform 0.3s ease; /* Transición añadida para el texto */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el texto */
+}
+
+.txt1:hover {
+    transform: scale(1.1); /* Efecto de escala al hacer hover */
+    color: #a0a0ff; /* Cambio de color opcional para mejor feedback */
+}
+
+.btn-container {
+    position: absolute;
+    left: 50%;
+    bottom: 3%;
+    transform: translateX(-50%);
+    z-index: 2;
+    width: 80%;
+    max-width: 881px;
+    height: 17rem;
+}
+
+.btn {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }

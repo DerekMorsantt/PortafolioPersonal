@@ -71,7 +71,7 @@ body::after {
     transform: translateX(-50%);
     z-index: 1;
     width: 100%;
-    max-width: 365px;
+    max-width: 440px;
     height: auto;
 }
 

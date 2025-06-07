@@ -26,21 +26,25 @@ body::before {
 }
 
 body::after {
-  background: rgba(29, 29, 44, 0.85);
+  background: rgba(40, 30, 70, 0.5);
   z-index: -1;
 }
 
 .contact {
-    position: fixed; /* Cambio clave: hace que sea fijo */
-    top: 3rem; /* Posición desde arriba */
-    right: 4rem; /* Posición desde la derecha */
-    z-index: 10; /* Asegura que esté sobre otros elementos */
+    position: fixed;
+    top: 3rem;
+    right: 4rem;
+    z-index: 10;
     font-size: 41px;
     color: #FFFFFF;
     font-family: 'Bebas Neue', sans-serif;
     text-decoration: none;
+    transition: transform 0.3s ease; /* Transición añadida */
 }
 
+.contact:hover {
+    transform: scale(1.1); /* Efecto de escala al hacer hover */
+}
 
 .message {
     position: fixed; /* Cambio clave: hace que sea fijo */
