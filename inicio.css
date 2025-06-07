@@ -48,13 +48,12 @@ body::after {
 
 .message-container {
     position: fixed; /* Fijo */
-    top: 8rem; /* Ajusta según necesidad */
+    top: 8rem;
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;
     width: 100%;
     max-width: 894px;
-    height: auto;
     padding: 0 1rem;
     text-align: center;
 }
@@ -66,13 +65,12 @@ body::after {
 
 .derek-container {
     position: fixed; /* Fijo */
-    top: 20rem; /* Debajo del mensaje */
+    top: 20rem;
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;
     width: 100%;
     max-width: 289px;
-    height: auto;
 }
 
 .derek-img {
