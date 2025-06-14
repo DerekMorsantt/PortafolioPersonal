@@ -71,7 +71,7 @@ body::after {
     transform: translateX(-50%);
     z-index: 1;
     width: 100%;
-    max-width: 440px;
+    max-width: 365px;
     height: auto;
 }
 
@@ -207,4 +207,175 @@ body::after {
     width: 100%;
     height: 100%;
     object-fit: contain;
+}
+
+@media (max-width: 768px) {
+    /* Ocultar elementos no esenciales */
+    .enter,
+    .scroll {
+        display: none !important;
+    }
+    
+    /* Prevenir scroll vertical */
+    body {
+        overflow-y: hidden;
+    }
+    
+    /* Ajustar fondo y contenedores */
+    .earth-container {
+        height: 40vh;
+        overflow: hidden;
+    }
+    
+    .earth {
+        min-width: 800px;
+        bottom: -2rem;
+    }
+    
+    /* Redimensionar contacto */
+    .contact {
+        font-size: 2rem;
+        top: 2rem;
+        right: 2rem;
+    }
+    
+    /* Ajustar mensaje principal */
+    .message-container {
+        top: 6rem;
+        max-width: 320px;
+    }
+    
+    /* Redimensionar imagen derek */
+    .derek-container {
+        top: 16rem;
+        max-width: 280px;
+    }
+    
+    /* Reposicionar área de botón */
+    .btn-container {
+        height: 14rem;
+        bottom: 6%;
+        max-width: 700px;
+    }
+    
+    /* Ajustar texto informativo */
+    .text-container {
+        bottom: 10%;
+        width: 65%;
+        font-size: 1.1rem;
+    }
+    
+    /* Redimensionar flechas de navegación */
+    .flecha, .flecha1 {
+        width: 40px;
+        height: 85px;
+    }
+    
+    .flecha {
+        right: 3%;
+    }
+    
+    .flecha1 {
+        left: 8%;
+    }
+    
+    /* Efecto hover más sutil para tabletas */
+    .flecha:hover, .flecha1:hover {
+        transform: translateX(-50%) scale(0.85);
+    }
+}
+
+/* Móviles (576px) */
+@media (max-width: 576px) {
+    .git {
+        width: 35px;
+        margin-bottom: 3px;
+    }
+    .earth-container {
+        height: 35vh;
+    }
+    
+    .earth {
+        width: 200%;
+        bottom: 0;
+    }
+    
+    .contact {
+        font-size: 24px;
+        top: 1.5rem;
+        right: 1.5rem;
+    }
+    
+    .message-container {
+        top: 4rem;
+        max-width: 250px;
+    }
+    
+    .derek-container {
+        top: 12rem;
+        max-width: 200px;
+    }
+    
+    .btn-container {
+        height: 9.5rem;
+        bottom: 40%;
+    }
+    
+    .text-container {
+        bottom: 42%;
+        width: 65%;
+        font-size: 0.8rem;
+    }
+    
+    .flecha, .flecha1 {
+        width: 30px;
+        height: 60px;
+        
+    }
+}
+
+/* Móviles pequeños (480px) */
+@media (max-width: 480px) {
+    .earth {
+        width: 220%;
+        bottom: -10%;
+    }
+    
+    .message-container {
+        top: 3.5rem;
+        max-width: 220px;
+    }
+    
+    .derek-container {
+        top: 10rem;
+        max-width: 180px;
+    }
+    
+    .btn-container {
+        height: 8rem;
+    }
+    
+    .text-container {
+        font-size: 0.8rem;
+    }
+}
+
+/* Móviles muy pequeños (360px) */
+@media (max-width: 360px) {
+    .earth {
+        width: 250%;
+    }
+    
+    .message-container {
+        max-width: 200px;
+    }
+    
+    .derek-container {
+        max-width: 160px;
+    }
+    
+    .flecha, .flecha1 {
+        width: 25px;
+        height: 50px;
+    }
 }

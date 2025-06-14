@@ -71,7 +71,7 @@ body::after {
     transform: translateX(-50%);
     z-index: 1;
     width: 100%;
-    max-width: 440px;
+    max-width: 365px;
     height: auto;
 }
 
@@ -166,4 +166,181 @@ body::after {
 
 .flecha1:hover {
     transform: translateX(-50%) scale(1.1); 
+}
+/* ===== MODIFICACIONES PRINCIPALES ===== */
+
+/* Ocultar enter y scroll en tabletas y móviles */
+@media (max-width: 768px) {
+    .enter,
+    .scroll {
+        display: none !important;
+    }
+    
+    /* Evitar scroll vertical */
+    body {
+        overflow-y: hidden;
+    }
+    
+    /* Ajuste para tablets */
+    .earth-container {
+        height: 40vh;
+    }
+    
+    .earth {
+        min-width: 800px;
+        bottom: 0;
+    }
+    
+    /* Centrar elementos */
+    .btn {
+        bottom: 30%;
+        transform: translateX(-50%);
+    }
+    
+    .flecha {
+        right: 5%;
+        top: 50%;
+    }
+    
+    .flecha1 {
+        left: 5%;
+        top: 50%;
+    }
+}
+
+/* ===== MODIFICACIONES PARA MÓVILES ===== */
+@media (max-width: 576px) {
+    /* Ajustar altura del contenedor de la tierra */
+    .earth-container {
+        height: 35vh;
+        overflow: hidden;
+    }
+    
+    /* Ajustar tamaño y posición de la tierra */
+    .earth {
+        width: 200%;
+        min-width: 0;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    /* Ajustar contacto */
+    .contact {
+        font-size: 24px;
+        top: 1.5rem;
+        right: 1.5rem;
+    }
+    
+    /* Ajustar mensaje */
+    .message-container {
+        top: 5rem;
+        max-width: 280px;
+    }
+    
+    /* Ajustar imagen derek */
+    .derek-container {
+        top: 13rem;
+        max-width: 200px;
+    }
+
+    /* Posicionar botón correctamente */
+    .btn {
+        bottom: 38%;
+        width: 180px;
+        height: 120px;
+    }
+    
+    /* Ajustar flechas */
+    .flecha,
+    .flecha1 {
+        width: 30px;
+        height: 60px;
+        top: 55%;
+        transform: translateY(-50%);
+    }
+    
+    .flecha {
+        right: 5%;
+    }
+    
+    .flecha1 {
+        left: 5%;
+    }
+    
+    /* Prevención de scroll */
+    body, html {
+        overflow-x: hidden;
+        overflow-y: hidden;
+        width: 100%;
+        height: 100%;
+    }
+
+    .flecha:hover, .flecha1:hover {
+        transform: scale(0.8); 
+}
+}
+
+/* Ajustes para móviles más pequeños */
+@media (max-width: 480px) {
+    .earth-container {
+        height: 30vh;
+    }
+    
+    .earth {
+        width: 220%;
+        bottom: -10%;
+    }
+    
+    .message-container {
+        top: 4rem;
+        max-width: 250px;
+    }
+    
+    .derek-container {
+        top: 11rem;
+        max-width: 140px;
+    }
+    
+    .btn {
+        bottom: 32%;
+        width: 160px;
+        height: 110px;
+    }
+
+     .flecha:hover, .flecha1:hover {
+        transform: scale(0.8); 
+        }
+}
+
+@media (max-width: 360px) {
+    .earth {
+        width: 250%;
+        bottom: -15%;
+    }
+    
+    .message-container {
+        top: 3.5rem;
+        max-width: 220px;
+    }
+    
+    .derek-container {
+        top: 10rem;
+        max-width: 130px;
+    }
+    
+    .btn {
+        bottom: 30%;
+        width: 150px;
+        height: 100px;
+    }
+    
+    .flecha,
+    .flecha1 {
+        width: 25px;
+        height: 50px;
+    }
+        .flecha:hover, .flecha1:hover {
+        transform: scale(0.8); 
+        }
 }

@@ -1,9 +1,10 @@
+/* Estilos base (para desktop/laptop) - TEXTO ORIGINAL */
 body {
     position: relative;
-    height: 100vh; /* Altura de la ventana visible */
+    height: 100vh;
     margin: 0;
     padding: 0;
-    overflow: hidden; /* Elimina el scroll */
+    overflow: hidden;
 }
 
 body::before,
@@ -14,12 +15,12 @@ body::after {
     width: 100%;
     height: 100%;
     content: "";
-    pointer-events: none; /* Evita que interfieran con los clics */
+    pointer-events: none;
 }
 
 body::before {
     z-index: -2;
-    background-image: url('../wallpaper/bgspace1.svg'); 
+    background-image: url('../wallpaper/bgspace1.svg');
     background-size: cover;
     background-position: center;
 }
@@ -38,15 +39,15 @@ body::after {
     color: #FFFFFF;
     font-family: 'Bebas Neue', sans-serif;
     text-decoration: none;
-    transition: transform 0.3s ease; /* Transición añadida */
+    transition: transform 0.3s ease;
 }
 
 .contact:hover {
-    transform: scale(1.1); /* Efecto de escala al hacer hover */
+    transform: scale(1.1);
 }
 
 .message-container {
-    position: fixed; /* Fijo */
+    position: fixed;
     top: 8rem;
     left: 50%;
     transform: translateX(-50%);
@@ -63,7 +64,7 @@ body::after {
 }
 
 .derek-container {
-    position: fixed; /* Fijo */
+    position: fixed;
     top: 20rem;
     left: 50%;
     transform: translateX(-50%);
@@ -77,7 +78,6 @@ body::after {
     height: auto;
 }
 
-/* Contenedor de la tierra fijo en la parte inferior */
 .earth-container {
     position: fixed;
     bottom: 0;
@@ -95,39 +95,45 @@ body::after {
     transform: translateX(-50%);
     width: auto;
     height: auto;
-    max-width: 100%;
+    max-width: none;
+    min-width: 1200px;
     z-index: 1;
 }
 
-/* Contenedor para el texto */
+/* BLOQUE DE TEXTO ORIGINAL PARA LAPTOP (sin cambios) */
 .text-container {
     position: absolute;
-    bottom: 12%; /* Ajustado para mejor posición */
+    bottom: 12%; /* Valor original */
     left: 50%;
     transform: translateX(-50%);
     z-index: 3;
-    width: 71%;
-    max-width: 600px;  
+    width: 71%; /* Valor original */
+    max-width: 600px; /* Valor original */  
     text-align: center;
     color: #FFFFFF;
     font-family: 'Montserrat', sans-serif;
-    font-size: clamp(1rem, 1.5vw, 1.4rem);
+    font-size: clamp(1rem, 1.5vw, 1.4rem); /* Valor original */
 }
 
 .txt {
-    margin-bottom: 0.5rem; /* Espacio entre párrafo y enlace */
+    margin-bottom: 0.5rem;
 }
 
 .txt1 {
     color: #FFFFFF;
     font-weight: bold;
     display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.txt1:hover {
+    transform: scale(1.05);
 }
 
 .btn-container {
     position: absolute;
     left: 50%;
-    bottom: 3%; /* Posición ajustada */
+    bottom: 3%;
     transform: translateX(-50%);
     z-index: 2;
     width: 80%;
@@ -138,17 +144,22 @@ body::after {
 .btn {
     width: 100%;
     height: 100%;
-    object-fit: contain; /* Asegura que la imagen se ajuste correctamente */
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.btn:hover {
+    transform: scale(1.02);
 }
 
 .apps {
     display: flex;
     flex-direction: column;
     position: fixed;
-    left: 3%; 
+    left: 3%;
     z-index: 2;
-    gap: 2rem; 
-    top: 35%; /* Posición vertical ajustada */
+    gap: 2rem;
+    top: 35%;
 }
 
 .apps img {
@@ -165,10 +176,15 @@ body::after {
 .enter {
     position: fixed;
     left: 3%;
-    bottom: 2rem; 
+    bottom: 2rem;
     z-index: 2;
     width: 90px;
     height: 126px;
+    transition: transform 0.3s ease;
+}
+
+.enter:hover {
+    transform: scale(1.1);
 }
 
 .scroll {
@@ -178,4 +194,171 @@ body::after {
     z-index: 2;
     width: 90px;
     height: 126px;
+    transition: transform 0.3s ease;
+}
+
+.scroll:hover {
+    transform: scale(1.1);
+}
+
+/* ===== MEDIA QUERIES (SOLO PARA TABLETS/MÓVILES) ===== */
+
+/* Tablets (768px) */
+@media (max-width: 768px) {
+    .contact {
+        font-size: 32px;
+        top: 2rem;
+        right: 2rem;
+    }
+    
+    .message-container {
+        top: 6rem;
+    }
+    
+    .derek-container {
+        top: 16rem;
+        max-width: 230px;
+    }
+    
+    .earth {
+        min-width: 800px;
+    }
+    
+    /* AJUSTE SOLO TABLET: Texto más compacto */
+    .text-container {
+        bottom: 10%; /* Ligero ajuste hacia arriba */
+        width: 68%;
+        font-size: clamp(0.9rem, 2.7vw, 1.1rem); /* Tamaño similar al original pero adaptado */
+    }
+    
+    .btn-container {
+        height: 14rem;
+    }
+    
+    .apps img {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .enter,
+    .scroll {
+        display: none !important;
+    }
+}
+
+/* Móviles grandes (576px) */
+@media (max-width: 576px) {
+    .contact {
+        font-size: 24px;
+        top: 1.5rem;
+        right: 1.5rem;
+    }
+    
+    .message-container {
+        top: 5rem;
+    }
+    
+    .derek-container {
+        top: 13rem;
+        max-width: 180px;
+    }
+    
+    .earth-container {
+        height: 60vh;
+        overflow: hidden;
+    }
+    
+    .earth {
+        min-width: 0;
+        width: 150%;
+        bottom: -15%;
+    }
+    
+    /* AJUSTES MÓVIL: Texto más arriba y compacto */
+    .text-container {
+        bottom: 34%; /* Posición más alta que en tablet */
+        width: 70%;
+        font-size: clamp(0.2rem, 2.8w, 1rem); /* Tamaño responsivo */
+        line-height: 1.2; /* Mejor legibilidad */
+    }
+    
+    .btn-container {
+        height: 11rem;
+        bottom: 30%;
+    }
+    
+    .apps {
+        flex-direction: row;
+        justify-content: center;
+        top: auto;
+        bottom: 2rem;
+        left: 0;
+        right: 0;
+        gap: 1.5rem;
+        padding: 0 1rem;
+    }
+    
+    .enter,
+    .scroll {
+        display: none;
+    }
+    
+    body, html {
+        overflow-x: hidden;
+    }
+}
+
+/* Móviles pequeños (480px) */
+@media (max-width: 480px) {
+    .earth {
+        width: 160%;
+        bottom: -10%;
+    }
+    
+    /* Ajuste fino para móviles pequeños */
+    .text-container {
+        bottom: 40%;
+        font-size: clamp(0.8rem, 3vw, 0.95rem);
+    }
+    
+    .btn-container {
+        height: 9rem;
+    }
+    
+    .apps {
+        gap: 1rem;
+        bottom: 1.5rem;
+    }
+    
+    .apps img {
+        width: 36px;
+        height: 36px;
+    }
+}
+
+/* Móviles muy pequeños (360px) */
+@media (max-width: 360px) {
+    .earth {
+        width: 170%;
+        bottom: -8%;
+    }
+    
+    /* Últimos ajustes para pantallas muy pequeñas */
+    .text-container {
+        bottom: 40%;
+        font-size: clamp(0.25rem, 2.8vw, 0.9rem);
+            }
+    
+    .btn-container {
+        height: 8rem;
+    }
+    
+    .apps {
+        bottom: 1rem;
+    }
+    
+    .apps img {
+        width: 32px;
+        height: 32px;
+    }
 }

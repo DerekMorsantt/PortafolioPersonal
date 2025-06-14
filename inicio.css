@@ -1,12 +1,12 @@
+/* Estilos base (para desktop/laptop) */
 body {
     position: relative;
-    height: 100vh; /* Usamos toda la altura visible */
+    height: 100vh;
     margin: 0;
     padding: 0;
-    overflow: hidden; /* Elimina el scroll */
+    overflow: hidden;
 }
 
-/* Fondo fijo */
 body::before,
 body::after {
     content: "";
@@ -39,15 +39,15 @@ body::after {
     color: #FFFFFF;
     font-family: 'Bebas Neue', sans-serif;
     text-decoration: none;
-    transition: transform 0.3s ease; /* Transición añadida */
+    transition: transform 0.3s ease;
 }
 
 .contact:hover {
-    transform: scale(1.1); /* Efecto de escala al hacer hover */
+    transform: scale(1.1);
 }
 
 .message-container {
-    position: fixed; /* Fijo */
+    position: fixed;
     top: 8rem;
     left: 50%;
     transform: translateX(-50%);
@@ -64,7 +64,7 @@ body::after {
 }
 
 .derek-container {
-    position: fixed; /* Fijo */
+    position: fixed;
     top: 20rem;
     left: 50%;
     transform: translateX(-50%);
@@ -78,7 +78,6 @@ body::after {
     height: auto;
 }
 
-/* Contenedor de la tierra fijo en la parte inferior */
 .earth-container {
     position: fixed;
     bottom: 0;
@@ -96,7 +95,8 @@ body::after {
     transform: translateX(-50%);
     width: auto;
     height: auto;
-    max-width: 100%;
+    max-width: none;
+    min-width: 1200px; /* Tierra grande en laptops */
     z-index: 1;
 }
 
@@ -123,7 +123,7 @@ body::after {
     left: 3%; 
     z-index: 2;
     gap: 2rem; 
-    top: 35%; /* Ajusta según necesidad */
+    top: 35%;
 }
 
 .apps img {
@@ -153,4 +153,134 @@ body::after {
     z-index: 2;
     width: 90px;
     height: 126px;
+}
+
+/* ===== MODIFICACIONES PRINCIPALES ===== */
+
+/* Ocultar enter y scroll en tabletas y móviles */
+@media (max-width: 768px) {
+    .enter,
+    .scroll {
+        display: none !important;
+    }
+    
+    /* Ajuste para tablets */
+    .earth {
+        min-width: 800px;
+    }
+}
+
+/* ===== MODIFICACIONES PARA MÓVILES ===== */
+@media (max-width: 576px) {
+    /* Reposicionar apps en fila horizontal al final de la pantalla */
+    .apps {
+        flex-direction: row;
+        justify-content: center;
+        gap: 1.5rem;
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 1rem;
+        top: auto;
+        transform: none;
+        padding: 0 1rem;
+    }
+    
+    /* Ajustes para la tierra en móviles */
+    .earth-container {
+        height: 50vh;
+        overflow: hidden;
+    }
+    
+    .earth {
+        min-width: 0;
+        width: 150%;
+        bottom: -20%;
+    }
+        .contact {
+        font-size: 24px;
+        top: 1.5rem;
+        right: 1.5rem;
+    }
+    
+        .message-container {
+        top: 5rem;
+    }
+    
+    .derek-container {
+        top: 13rem;
+        max-width: 180px;
+    }
+
+    /* Asegurar que el botón no se superponga */
+    .btn {
+        bottom: 50% !important;
+    }
+    
+    /* Prevención de scroll horizontal */
+    body, html {
+        overflow-x: hidden;
+        width: 100%;
+    }
+}
+
+/* Ajustes para móviles más pequeños */
+@media (max-width: 480px) {
+        .message-container {
+        top: 5rem;
+    }
+    
+    .derek-container {
+        top: 13rem;
+        max-width: 180px;
+    }
+        .contact {
+        font-size: 24px;
+        top: 1.5rem;
+        right: 1.5rem;
+    }
+    
+    .apps {
+        bottom: 1rem;
+    }
+    
+    .apps img {
+        width: 36px;
+        height: 36px;
+    }
+    
+    .earth {
+        width: 170%;
+        bottom: -15%;
+    }
+}
+
+@media (max-width: 360px) {
+        .message-container {
+        top: 5rem;
+    }
+    
+    .derek-container {
+        top: 13rem;
+        max-width: 180px;
+    }
+        .contact {
+        font-size: 24px;
+        top: 1.5rem;
+        right: 1.5rem;
+    }
+    
+    .apps {
+        bottom: 1rem;
+    }
+    
+    .apps img {
+        width: 36px;
+        height: 36px;
+    }
+    
+    .earth {
+        width: 170%;
+        bottom: -15%;
+    }
 }
