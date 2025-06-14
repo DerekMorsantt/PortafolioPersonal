@@ -1,231 +1,212 @@
-/* ESTILOS BASE */
 body {
-  position: relative;
-  min-height: 100vh;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  width: 100vw;
+    position: relative;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
 
+/* Fondo fijo que no se mueve con el contenido */
 body::before,
 body::after {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 body::before {
-  background-image: url('../wallpaper/3969 1.svg');
-  background-size: cover;
-  background-position: center;
-  z-index: -2;
-  opacity: 1;
+    background-image: url('../wallpaper/3969\ 1.svg');
+    background-size: cover;
+    background-position: center;
+    z-index: -2;
+    opacity: 1;
 }
 
 body::after {
-  background: rgba(40, 30, 70, 0.5);
-  z-index: -1;
+    background: rgba(40, 30, 70, 0.5);
+    z-index: -1;
 }
 
-/* ELEMENTOS SUPERIORES */
 .contact {
-  position: fixed;
-  top: 3rem;
-  right: 4rem;
-  z-index: 10;
-  font-size: 41px;
-  color: #FFFFFF;
-  font-family: 'Bebas Neue', sans-serif;
-  text-decoration: none;
-  transition: transform 0.3s ease;
+    position: fixed;
+    top: 3rem;
+    right: 4rem;
+    z-index: 10;
+    font-size: 41px;
+    color: #FFFFFF;
+    font-family: 'Bebas Neue', sans-serif;
+    text-decoration: none;
+    transition: transform 0.3s ease; /* Transición añadida */
 }
 
 .contact:hover {
-  transform: scale(1.1);
+    transform: scale(1.1); /* Efecto de escala al hacer hover */
 }
 
 .message-container {
-  position: fixed;
-  top: 8rem;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1;
-  width: 100%;
-  max-width: 364px;
-  padding: 0 1rem;
-  text-align: center;
+    position: fixed;
+    top: 8rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    width: 100%;
+    max-width: 364px;
+    height: auto;
+    padding: 0 1rem;
+    text-align: center;
 }
 
 .message-img {
-  width: 100%;
-  height: auto;
+    width: 100%;
+    height: auto;
 }
 
 .derek-container {
-  position: fixed;
-  top: 20rem;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1;
-  width: 100%;
-  max-width: 365px;
+    position: fixed;
+    top: 20rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    width: 100%;
+    max-width: 365px;
+    height: auto;
 }
 
 .derek-img {
-  width: 100%;
-  height: auto;
+    width: 100%;
+    height: auto;
 }
 
-/* TIERRA Y CONTENEDOR PRINCIPAL */
 .earth-container {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: auto;
-  min-height: 40vh;
-  overflow: hidden;
-  z-index: 1;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 550px;
+    overflow: visible;
+    z-index: 1;
 }
 
 .earth {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  max-width: 1200px;
-  height: auto;
-  z-index: 1;
-}
-
-/* BLOQUE DE TEXTO (SIN RECORTE) */
-.text-container {
-  position: absolute;
-  bottom: 9%;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 3;
-  width: 71%;
-  max-width: 600px;
-  min-height: 100px; /* Altura mínima */
-  height: auto; /* Altura flexible según contenido */
-  text-align: center;
-  color: #FFFFFF;
-  font-family: 'Montserrat', sans-serif;
-  font-size: clamp(1rem, 1.5vw, 1.4rem);
-  padding: 10px;
-  box-sizing: border-box;
-}
-
-.txt {
-  margin-bottom: 1rem;
-  line-height: 1.4;
-}
-
-.txt1 {
-  color: #FFFFFF;
-  font-weight: bold;
-  display: inline-block;
-  transition: transform 0.3s ease;
-  cursor: pointer;
-}
-
-.txt1:hover {
-  transform: scale(1.1);
-  color: #a0a0ff;
-}
-
-/* BOTONES Y ELEMENTOS INTERACTIVOS */
-.btn-container {
-  position: absolute;
-  left: 50%;
-  bottom: 3%;
-  transform: translateX(-50%);
-  z-index: 2;
-  width: 80%;
-  max-width: 881px;
-  height: 17rem;
+    position: absolute;
+    bottom: 0rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    z-index: 1;
 }
 
 .btn {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-.apps {
-  display: flex;
-  flex-direction: column;
-  position: fixed;
-  left: 3%;
-  z-index: 2;
-  gap: 2rem;
-  top: 35%;
-}
-
-.apps img {
-  width: 45px;
-  height: 45px;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
-.apps img:hover {
-  transform: scale(1.1);
-}
-
-.enter, .scroll {
-  position: fixed;
-  bottom: 2rem;
-  z-index: 2;
-  width: 90px;
-  height: 126px;
+    position: absolute;
+    left: 50%;
+    bottom: 10%; 
+    transform: translateX(-50%);
+    z-index: 2;
+    width: 249px;
+    height: 168px;
 }
 
 .enter {
-  left: 3%;
+    position: fixed;
+    left: 3%;
+    bottom: 2rem; 
+    z-index: 2;
+    width: 90px;
+    height: 126px;
 }
 
 .scroll {
-  right: 4rem;
-}
+    position: fixed;
+    right: 4rem;
+    bottom: 2rem;
+    z-index: 2;
+    width: 90px;
+    height: 126px;
+   }
 
-/* FLECHAS DE NAVEGACIÓN */
 .flecha {
-  position: absolute;
-  right: 2%;
-  top: 45%;
-  transform: translateX(-50%);
-  z-index: 2;
-  width: 50px;
-  height: 102px;
-  transition: transform 0.3s ease;
-  cursor: pointer;
+    position: absolute;
+    right: 2%;
+    top: 45%;
+    transform: translateX(-50%);
+    z-index: 2;
+    width: 50px;
+    height: 102px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
 }
 
 .flecha:hover {
-  transform: translateX(-50%) scale(1.1);
+    transform: translateX(-50%) scale(1.1); 
 }
 
 .flecha1 {
-  position: absolute;
-  left: 4%;
-  top: 45%;
-  transform: translateX(-50%);
-  z-index: 2;
-  width: 50px;
-  height: 102px;
-  transition: transform 0.3s ease;
-  cursor: pointer;
+    position: absolute;
+    left: 4%;
+    top: 45%;
+    transform: translateX(-50%);
+    z-index: 2;
+    width: 50px;
+    height: 102px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
 }
 
 .flecha1:hover {
-  transform: translateX(-50%) scale(1.1);
+    transform: translateX(-50%) scale(1.1); 
+}
+
+.text-container {
+    position: absolute;
+    bottom: 9%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    width: 71%;
+    max-width: 600px;  
+    text-align: center;
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(1rem, 1.5vw, 1.4rem);
+}
+
+.txt {
+    margin-bottom: 1rem;
+}
+
+.txt1 {
+    color: #FFFFFF;
+    font-weight: bold;
+    display: inline-block;
+    transition: transform 0.3s ease; /* Transición añadida para el texto */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el texto */
+}
+
+.txt1:hover {
+    transform: scale(1.1); /* Efecto de escala al hacer hover */
+    color: #a0a0ff; /* Cambio de color opcional para mejor feedback */
+}
+
+.btn-container {
+    position: absolute;
+    left: 50%;
+    bottom: 3%;
+    transform: translateX(-50%);
+    z-index: 2;
+    width: 80%;
+    max-width: 881px;
+    height: 17rem;
+}
+
+.btn {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 /* MEDIA QUERIES */
