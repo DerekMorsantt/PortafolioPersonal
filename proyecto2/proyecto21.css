@@ -1,381 +1,387 @@
+/* ESTILOS BASE */
 body {
-    position: relative;
-    min-height: 100vh;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  width: 100vw;
 }
 
-/* Fondo fijo que no se mueve con el contenido */
 body::before,
 body::after {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 body::before {
-    background-image: url('../wallpaper/3969\ 1.svg');
-    background-size: cover;
-    background-position: center;
-    z-index: -2;
-    opacity: 1;
+  background-image: url('../wallpaper/3969 1.svg');
+  background-size: cover;
+  background-position: center;
+  z-index: -2;
+  opacity: 1;
 }
 
 body::after {
-    background: rgba(40, 30, 70, 0.5);
-    z-index: -1;
+  background: rgba(40, 30, 70, 0.5);
+  z-index: -1;
 }
 
+/* ELEMENTOS SUPERIORES */
 .contact {
-    position: fixed;
-    top: 3rem;
-    right: 4rem;
-    z-index: 10;
-    font-size: 41px;
-    color: #FFFFFF;
-    font-family: 'Bebas Neue', sans-serif;
-    text-decoration: none;
-    transition: transform 0.3s ease; /* Transición añadida */
+  position: fixed;
+  top: 3rem;
+  right: 4rem;
+  z-index: 10;
+  font-size: 41px;
+  color: #FFFFFF;
+  font-family: 'Bebas Neue', sans-serif;
+  text-decoration: none;
+  transition: transform 0.3s ease;
 }
 
 .contact:hover {
-    transform: scale(1.1); /* Efecto de escala al hacer hover */
+  transform: scale(1.1);
 }
 
 .message-container {
-    position: fixed;
-    top: 8rem;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1;
-    width: 100%;
-    max-width: 364px;
-    height: auto;
-    padding: 0 1rem;
-    text-align: center;
+  position: fixed;
+  top: 8rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  width: 100%;
+  max-width: 364px;
+  padding: 0 1rem;
+  text-align: center;
 }
 
 .message-img {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
 .derek-container {
-    position: fixed;
-    top: 20rem;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1;
-    width: 100%;
-    max-width: 365px;
-    height: auto;
+  position: fixed;
+  top: 20rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  width: 100%;
+  max-width: 365px;
 }
 
 .derek-img {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
+/* TIERRA Y CONTENEDOR PRINCIPAL */
 .earth-container {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 550px;
-    overflow: visible;
-    z-index: 1;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  min-height: 40vh;
+  overflow: hidden;
+  z-index: 1;
 }
 
 .earth {
-    position: absolute;
-    bottom: 0rem;
-    left: 50%;
-    transform: translateX(-50%);
-    width: auto;
-    height: auto;
-    max-width: 100%;
-    z-index: 1;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  z-index: 1;
 }
 
-.btn {
-    position: absolute;
-    left: 50%;
-    bottom: 10%; 
-    transform: translateX(-50%);
-    z-index: 2;
-    width: 249px;
-    height: 168px;
-}
-
-.enter {
-    position: fixed;
-    left: 3%;
-    bottom: 2rem; 
-    z-index: 2;
-    width: 90px;
-    height: 126px;
-}
-
-.scroll {
-    position: fixed;
-    right: 4rem;
-    bottom: 2rem;
-    z-index: 2;
-    width: 90px;
-    height: 126px;
-   }
-
-.flecha {
-    position: absolute;
-    right: 2%;
-    top: 45%;
-    transform: translateX(-50%);
-    z-index: 2;
-    width: 50px;
-    height: 102px;
-    transition: transform 0.3s ease;
-    cursor: pointer;
-}
-
-.flecha:hover {
-    transform: translateX(-50%) scale(1.1); 
-}
-
-.flecha1 {
-    position: absolute;
-    left: 4%;
-    top: 45%;
-    transform: translateX(-50%);
-    z-index: 2;
-    width: 50px;
-    height: 102px;
-    transition: transform 0.3s ease;
-    cursor: pointer;
-}
-
-.flecha1:hover {
-    transform: translateX(-50%) scale(1.1); 
-}
-
+/* BLOQUE DE TEXTO (SIN RECORTE) */
 .text-container {
-    position: absolute;
-    bottom: 9%;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 3;
-    width: 71%;
-    max-width: 600px;  
-    text-align: center;
-    color: #FFFFFF;
-    font-family: 'Montserrat', sans-serif;
-    font-size: clamp(1rem, 1.5vw, 1.4rem);
+  position: absolute;
+  bottom: 9%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  width: 71%;
+  max-width: 600px;
+  min-height: 100px; /* Altura mínima */
+  height: auto; /* Altura flexible según contenido */
+  text-align: center;
+  color: #FFFFFF;
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(1rem, 1.5vw, 1.4rem);
+  padding: 10px;
+  box-sizing: border-box;
 }
 
 .txt {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
+  line-height: 1.4;
 }
 
 .txt1 {
-    color: #FFFFFF;
-    font-weight: bold;
-    display: inline-block;
-    transition: transform 0.3s ease; /* Transición añadida para el texto */
-    cursor: pointer; /* Cambia el cursor al pasar sobre el texto */
+  color: #FFFFFF;
+  font-weight: bold;
+  display: inline-block;
+  transition: transform 0.3s ease;
+  cursor: pointer;
 }
 
 .txt1:hover {
-    transform: scale(1.1); /* Efecto de escala al hacer hover */
-    color: #a0a0ff; /* Cambio de color opcional para mejor feedback */
+  transform: scale(1.1);
+  color: #a0a0ff;
 }
 
+/* BOTONES Y ELEMENTOS INTERACTIVOS */
 .btn-container {
-    position: absolute;
-    left: 50%;
-    bottom: 3%;
-    transform: translateX(-50%);
-    z-index: 2;
-    width: 80%;
-    max-width: 881px;
-    height: 17rem;
+  position: absolute;
+  left: 50%;
+  bottom: 3%;
+  transform: translateX(-50%);
+  z-index: 2;
+  width: 80%;
+  max-width: 881px;
+  height: 17rem;
 }
 
 .btn {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
+.apps {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  left: 3%;
+  z-index: 2;
+  gap: 2rem;
+  top: 35%;
+}
+
+.apps img {
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.apps img:hover {
+  transform: scale(1.1);
+}
+
+.enter, .scroll {
+  position: fixed;
+  bottom: 2rem;
+  z-index: 2;
+  width: 90px;
+  height: 126px;
+}
+
+.enter {
+  left: 3%;
+}
+
+.scroll {
+  right: 4rem;
+}
+
+/* FLECHAS DE NAVEGACIÓN */
+.flecha {
+  position: absolute;
+  right: 2%;
+  top: 45%;
+  transform: translateX(-50%);
+  z-index: 2;
+  width: 50px;
+  height: 102px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.flecha:hover {
+  transform: translateX(-50%) scale(1.1);
+}
+
+.flecha1 {
+  position: absolute;
+  left: 4%;
+  top: 45%;
+  transform: translateX(-50%);
+  z-index: 2;
+  width: 50px;
+  height: 102px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.flecha1:hover {
+  transform: translateX(-50%) scale(1.1);
+}
+
+/* MEDIA QUERIES */
 @media (max-width: 768px) {
-    /* Ocultar elementos no esenciales */
-    .enter,
-    .scroll {
-        display: none !important;
-    }
-    
-    /* Prevenir scroll vertical */
-    body {
-        overflow-y: hidden;
-    }
-    
-    /* Ajustar fondo y contenedores */
-    .earth-container {
-        height: 40vh;
-        overflow: hidden;
-    }
-    
-    .earth {
-        min-width: 800px;
-        bottom: -2rem;
-    }
-    
-    /* Redimensionar contacto */
-    .contact {
-        font-size: 2rem;
-        top: 2rem;
-        right: 2rem;
-    }
-    
-    /* Ajustar mensaje principal */
-    .message-container {
-        top: 6rem;
-        max-width: 320px;
-    }
-    
-    /* Redimensionar imagen derek */
-    .derek-container {
-        top: 16rem;
-        max-width: 280px;
-    }
-    
-    /* Reposicionar área de botón */
-    .btn-container {
-        height: 14rem;
-        bottom: 6%;
-        max-width: 700px;
-    }
-    
-    /* Ajustar texto informativo */
-    .text-container {
-        bottom: 10%;
-        width: 65%;
-        font-size: 1.1rem;
-    }
-    
-    /* Redimensionar flechas de navegación */
-    .flecha, .flecha1 {
-        width: 40px;
-        height: 85px;
-    }
-    
-    .flecha {
-        right: 3%;
-    }
-    
-    .flecha1 {
-        left: 8%;
-    }
-    
-    /* Efecto hover más sutil para tabletas */
-    .flecha:hover, .flecha1:hover {
-        transform: translateX(-50%) scale(0.85);
-    }
+  .enter, .scroll {
+    display: none !important;
+  }
+  
+  body {
+    overflow-y: hidden;
+  }
+  
+  .earth-container {
+    height: 40vh;
+  }
+  
+  .earth {
+    min-width: 800px;
+    bottom: -2rem;
+  }
+  
+  .contact {
+    font-size: 2rem;
+    top: 2rem;
+    right: 2rem;
+  }
+  
+  .message-container {
+    top: 6rem;
+    max-width: 320px;
+  }
+  
+  .derek-container {
+    top: 16rem;
+    max-width: 280px;
+  }
+  
+  .btn-container {
+    height: 14rem;
+    bottom: 6%;
+    max-width: 700px;
+  }
+  
+  .text-container {
+    bottom: 10%;
+    width: 65%;
+    min-height: 80px;
+    font-size: 1.1rem;
+  }
+  
+  .flecha, .flecha1 {
+    width: 40px;
+    height: 85px;
+  }
+  
+  .flecha {
+    right: 3%;
+  }
+  
+  .flecha1 {
+    left: 8%;
+  }
+  
+  .flecha:hover, .flecha1:hover {
+    transform: translateX(-50%) scale(0.85);
+  }
 }
 
-/* Móviles (576px) */
 @media (max-width: 576px) {
+
     .git {
-        width: 35px;
-        margin-bottom: 3px;
-    }
-    .earth-container {
-        height: 35vh;
-    }
-    
-    .earth {
-        width: 200%;
-        bottom: 0;
-    }
-    
-    .contact {
-        font-size: 24px;
-        top: 1.5rem;
-        right: 1.5rem;
-    }
-    
-    .message-container {
-        top: 4rem;
-        max-width: 250px;
-    }
-    
-    .derek-container {
-        top: 12rem;
-        max-width: 200px;
-    }
-    
-    .btn-container {
-        height: 9.5rem;
-        bottom: 40%;
-    }
-    
-    .text-container {
-        bottom: 42%;
-        width: 65%;
-        font-size: 0.8rem;
-    }
-    
-    .flecha, .flecha1 {
         width: 30px;
-        height: 60px;
-        
     }
+  .earth-container {
+    height: 35vh;
+  }
+  
+  .earth {
+    width: 200%;
+    bottom: 0;
+  }
+  
+  .contact {
+    font-size: 24px;
+    top: 1.5rem;
+    right: 1.5rem;
+  }
+  
+  .message-container {
+    top: 4rem;
+    max-width: 250px;
+  }
+  
+  .derek-container {
+    top: 12rem;
+    max-width: 200px;
+  }
+  
+  .btn-container {
+    height: 9.5rem;
+    bottom: 40%;
+  }
+  
+  .text-container {
+    bottom: 39%;
+    width: 65%;
+    min-height: 70px;
+    font-size: 0.8rem;
+  }
+  
+  .flecha, .flecha1 {
+    width: 30px;
+    height: 60px;
+  }
 }
 
-/* Móviles pequeños (480px) */
 @media (max-width: 480px) {
-    .earth {
-        width: 220%;
-        bottom: -10%;
-    }
-    
-    .message-container {
-        top: 3.5rem;
-        max-width: 220px;
-    }
-    
-    .derek-container {
-        top: 10rem;
-        max-width: 180px;
-    }
-    
-    .btn-container {
-        height: 8rem;
-    }
-    
-    .text-container {
-        font-size: 0.8rem;
-    }
+  .earth {
+    width: 220%;
+    bottom: -10%;
+  }
+  
+  .message-container {
+    top: 3.5rem;
+    max-width: 220px;
+  }
+  
+  .derek-container {
+    top: 10rem;
+    max-width: 180px;
+  }
+  
+  .btn-container {
+    height: 8rem;
+  }
+  
+  .text-container {
+    font-size: 0.8rem;
+  }
 }
 
-/* Móviles muy pequeños (360px) */
 @media (max-width: 360px) {
-    .earth {
-        width: 250%;
-    }
-    
-    .message-container {
-        max-width: 200px;
-    }
-    
-    .derek-container {
-        max-width: 160px;
-    }
-    
-    .flecha, .flecha1 {
-        width: 25px;
-        height: 50px;
-    }
+  .earth {
+    width: 250%;
+  }
+  
+  .message-container {
+    max-width: 200px;
+  }
+  
+  .derek-container {
+    max-width: 160px;
+  }
+  
+  .flecha, .flecha1 {
+    width: 25px;
+    height: 50px;
+  }
 }
