@@ -35,7 +35,7 @@ body::after {
     top: 3rem;
     right: 4rem;
     z-index: 10;
-    font-size: 41px;
+    font-size: 40px;
     color: #FFFFFF;
     font-family: 'Bebas Neue', sans-serif;
     text-decoration: none;
@@ -53,7 +53,7 @@ body::after {
     transform: translateX(-50%);
     z-index: 1;
     width: 100%;
-    max-width: 894px;
+    max-width: 800px;
     padding: 0 1rem;
     text-align: center;
 }
@@ -65,12 +65,12 @@ body::after {
 
 .derek-container {
     position: fixed;
-    top: 20rem;
+    top: 18rem;
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;
     width: 100%;
-    max-width: 289px;
+    max-width: 250px;
 }
 
 .derek-img {
@@ -83,7 +83,7 @@ body::after {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 550px;
+    height: 450px;
     overflow: visible;
     z-index: 1;
 }
@@ -93,21 +93,19 @@ body::after {
     bottom: -5rem;
     left: 50%;
     transform: translateX(-50%);
-    width: auto;
-    height: auto;
-    max-width: none;
-    min-width: 1200px;
+    width: 90%;
+    height: 90%;
     z-index: 1;
 }
 
 /* BLOQUE DE TEXTO ORIGINAL PARA LAPTOP (sin cambios) */
 .text-container {
     position: absolute;
-    bottom: 12%; /* Valor original */
+    bottom: 20%; /* Valor original */
     left: 50%;
     transform: translateX(-50%);
     z-index: 3;
-    width: 71%; /* Valor original */
+    width: 60%; /* Valor original */
     max-width: 600px; /* Valor original */  
     text-align: center;
     color: #FFFFFF;
@@ -137,7 +135,7 @@ body::after {
     transform: translateX(-50%);
     z-index: 2;
     width: 80%;
-    max-width: 881px;
+    max-width: 800px;
     height: 17rem;
 }
 
@@ -163,8 +161,8 @@ body::after {
 }
 
 .apps img {
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
     cursor: pointer;
     transition: transform 0.3s ease;
 }
@@ -178,8 +176,8 @@ body::after {
     left: 3%;
     bottom: 2rem;
     z-index: 2;
-    width: 90px;
-    height: 126px;
+    width: 75px;
+    height: 100px;
     transition: transform 0.3s ease;
 }
 
@@ -192,8 +190,8 @@ body::after {
     right: 4rem;
     bottom: 2rem;
     z-index: 2;
-    width: 90px;
-    height: 126px;
+        width: 75px;
+    height: 100px;
     transition: transform 0.3s ease;
 }
 
@@ -264,8 +262,7 @@ body::after {
     }
     
     .earth-container {
-        height: 60vh;
-        overflow: hidden;
+        height: 30vh;
     }
     
     .earth {
@@ -276,15 +273,15 @@ body::after {
     
     /* AJUSTES MÓVIL: Texto más arriba y compacto */
     .text-container {
-        bottom: 34%; /* Posición más alta que en tablet */
+        position: relative;
+        bottom: 100%; /* Posición más alta que en tablet */
         width: 70%;
-        font-size: clamp(0.2rem, 2.8w, 1rem); /* Tamaño responsivo */
-        line-height: 1.2; /* Mejor legibilidad */
+        font-size: 2px; /* Tamaño responsivo */
     }
     
     .btn-container {
-        height: 11rem;
-        bottom: 30%;
+        height: 100%;
+        bottom: 99%;
     }
     
     .apps {
