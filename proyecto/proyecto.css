@@ -167,3 +167,179 @@ body::after {
 .flecha:hover {
     transform: translateX(-50%) scale(1.1); 
 }
+
+@media (max-width: 768px) {
+    .contact {
+        font-size: 32px;
+        top: 2rem;
+        right: 2rem;
+    }
+    
+    .message-container {
+        top: 6rem;
+    }
+    
+    .derek-container {
+        top: 16rem;
+        max-width: 230px;
+    }
+    
+    .earth {
+        min-width: 800px;
+    }
+    
+    /* AJUSTE SOLO TABLET: Texto más compacto */
+    .text-container {
+        bottom: 10%; /* Ligero ajuste hacia arriba */
+        width: 68%;
+        font-size: clamp(0.9rem, 2.7vw, 1.1rem); /* Tamaño similar al original pero adaptado */
+    }
+    
+    .btn-container {
+        height: 14rem;
+    }
+    
+    .apps img {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .enter,
+    .scroll {
+        display: none !important;
+    }
+}
+
+/* Móviles grandes (576px) */
+@media (max-width: 576px) {
+
+    .skills {
+        bottom: 100%;
+        position: absolute;
+        width: 330px;
+        
+    }
+    .skill-img {
+        max-width: 300px;
+        left: 13%;
+        position: absolute;
+    }
+        .flecha{
+        width: 50px;
+        height: 60px;
+        top: 76%;
+        right: 37%;
+    }
+
+     .flecha:hover {
+        transform: scale(0.8); 
+        }
+    .contact {
+        font-size: 24px;
+        top: 1.5rem;
+        right: 1.5rem;
+    }
+    
+    .message-container {
+        top: 5rem;
+        max-width: 140px;
+    }
+    
+    .derek-container {
+        top: 13rem;
+        max-width: 150px;
+    }
+    
+    .earth-container {
+        height: 15vh;
+    }
+    
+    .earth {
+        min-width: 100%;
+        max-width: 90%;
+    }
+    
+    /* AJUSTES MÓVIL: Texto más arriba y compacto */
+    .text-container {
+        position: relative;
+        bottom: 100%; /* Posición más alta que en tablet */
+        width: 70%;
+        font-size: 2px; /* Tamaño responsivo */
+    }
+
+    
+    .apps {
+        flex-direction: row;
+        justify-content: center;
+        top: auto;
+        bottom: 2rem;
+        left: 0;
+        right: 0;
+        gap: 1.5rem;
+        padding: 0 1rem;
+    }
+    
+    .enter,
+    .scroll {
+        display: none;
+    }
+    
+    body, html {
+        overflow-x: hidden;
+    }
+}
+
+/* Móviles pequeños (480px) */
+@media (max-width: 480px) {
+    .earth {
+        width: 160%;
+        bottom: -10%;
+    }
+    
+    /* Ajuste fino para móviles pequeños */
+    .text-container {
+        bottom: 40%;
+        font-size: clamp(0.8rem, 3vw, 0.95rem);
+    }
+    
+    .btn-container {
+        height: 9rem;
+    }
+    
+    .apps {
+        gap: 1rem;
+        bottom: 1.5rem;
+    }
+    
+    .apps img {
+        width: 36px;
+        height: 36px;
+    }
+}
+
+/* Móviles muy pequeños (360px) */
+@media (max-width: 360px) {
+    .earth {
+        width: 170%;
+        bottom: -8%;
+    }
+    
+    /* Últimos ajustes para pantallas muy pequeñas */
+    .text-container {
+        bottom: 40%;
+        font-size: clamp(0.25rem, 2.8vw, 0.9rem);
+            }
+    
+    .btn-container {
+        height: 8rem;
+    }
+    
+    .apps {
+        bottom: 1rem;
+    }
+    
+    .apps img {
+        width: 32px;
+        height: 32px;
+    }
+}
