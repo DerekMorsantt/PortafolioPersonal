@@ -236,10 +236,10 @@ body::after {
 
 
   .txt {
-    margin-bottom: 306px;
-    font-size: 12px;
-    max-width: 98%;
-    margin-left: 4px;
+    margin-bottom: 310px;
+    font-size: 11px;
+    max-width: 90%;
+    margin-left: 16px;
   }
   .earth {
     width: 100%;
@@ -262,12 +262,11 @@ body::after {
   }
 
    .flecha {
-
     width: 20px;
    }
 
    .git {
-    width: 25px;
+    width: 22px;
    }
 
 }

@@ -35,7 +35,7 @@ body::after {
     top: 3rem;
     right: 4rem;
     z-index: 10;
-    font-size: 41px;
+    font-size: 40px;
     color: #FFFFFF;
     font-family: 'Bebas Neue', sans-serif;
     text-decoration: none;
@@ -53,7 +53,7 @@ body::after {
     transform: translateX(-50%);
     z-index: 1;
     width: 100%;
-    max-width: 364px;
+    max-width: 350px;
     height: auto;
     padding: 0 1rem;
     text-align: center;
@@ -66,12 +66,12 @@ body::after {
 
 .derek-container {
     position: fixed; /* Fijo */
-    top: 20rem; /* Debajo del mensaje */
+    top: 18rem; /* Debajo del mensaje */
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;
     width: 100%;
-    max-width: 365px;
+    max-width: 250px;
     height: auto;
 }
 
@@ -85,7 +85,7 @@ body::after {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 550px;
+    height: 450px;
     overflow: visible;
     z-index: 1;
 }
@@ -97,14 +97,14 @@ body::after {
     transform: translateX(-50%);
     width: auto;
     height: auto;
-    max-width: 100%;
+    max-width: 80%;
     z-index: 1;
 }
 
 .btn {
     position: absolute;
     left: 50%;
-    bottom: 10%; 
+    bottom: 5%; 
     transform: translateX(-50%);
     z-index: 2;
     width: 249px;
@@ -122,8 +122,8 @@ body::after {
     left: 3%;
     bottom: 2rem; 
     z-index: 2;
-    width: 90px;
-    height: 126px;
+    width: 75px;
+    height: 100px;
 }
 
 .scroll {
@@ -131,8 +131,8 @@ body::after {
     right: 4rem;
     bottom: 2rem;
     z-index: 2;
-    width: 90px;
-    height: 126px;
+    width: 75px;
+    height: 100px;
 }
 
 
@@ -210,20 +210,6 @@ body::after {
 
 /* ===== MODIFICACIONES PARA MÓVILES ===== */
 @media (max-width: 576px) {
-    /* Ajustar altura del contenedor de la tierra */
-    .earth-container {
-        height: 35vh;
-        overflow: hidden;
-    }
-    
-    /* Ajustar tamaño y posición de la tierra */
-    .earth {
-        width: 200%;
-        min-width: 0;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-    }
     
     /* Ajustar contacto */
     .contact {
@@ -231,31 +217,23 @@ body::after {
         top: 1.5rem;
         right: 1.5rem;
     }
-    
-    /* Ajustar mensaje */
-    .message-container {
-        top: 5rem;
-        max-width: 280px;
-    }
-    
-    /* Ajustar imagen derek */
-    .derek-container {
-        top: 13rem;
-        max-width: 200px;
+
+
+     .flecha:hover, .flecha1:hover {
+        transform: scale(0.8); 
+        }
+
+    /* Ajustar flechas */
+    .flecha {
+        width: 30px;
+        height: 50px;
+        top: 55%;
+        transform: translateY(-50%);
     }
 
-    /* Posicionar botón correctamente */
-    .btn {
-        bottom: 38%;
-        width: 180px;
-        height: 120px;
-    }
-    
-    /* Ajustar flechas */
-    .flecha,
-    .flecha1 {
+        .flecha1 {
         width: 30px;
-        height: 60px;
+        height: 55px;
         top: 55%;
         transform: translateY(-50%);
     }
@@ -287,7 +265,9 @@ body::after {
         width: 220%;
         bottom: -10%;
     }
-    
+     .flecha:hover, .flecha1:hover {
+        transform: scale(0.8); 
+        }
     .message-container {
         top: 4rem;
         max-width: 250px;
@@ -299,13 +279,10 @@ body::after {
     }
     
     .btn {
-        bottom: 32%;
+        bottom: 38%;
         width: 160px;
         height: 110px;
     }
-     .flecha:hover, .flecha1:hover {
-        transform: scale(0.8); 
-        }
 }
 
 @media (max-width: 360px) {
@@ -325,7 +302,7 @@ body::after {
     }
     
     .btn {
-        bottom: 30%;
+        bottom: 50%;
         width: 150px;
         height: 100px;
     }
@@ -335,6 +312,7 @@ body::after {
         width: 25px;
         height: 50px;
     }
+
      .flecha:hover, .flecha1:hover {
         transform: scale(0.8); 
         }
