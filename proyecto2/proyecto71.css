@@ -1,0 +1,272 @@
+body {
+    position: relative;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Fondo fijo que no se mueve con el contenido */
+body::before,
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body::before {
+    background-image: url('../wallpaper/3969\ 1.svg');
+    background-size: cover;
+    background-position: center;
+    z-index: -2;
+    opacity: 1;
+}
+
+body::after {
+    background: rgba(40, 30, 70, 0.5);
+    z-index: -1;
+}
+
+.contact {
+    position: fixed;
+    top: 3rem;
+    right: 4rem;
+    z-index: 10;
+    font-size: 40px;
+    color: #FFFFFF;
+    font-family: 'Bebas Neue', sans-serif;
+    text-decoration: none;
+    transition: transform 0.3s ease; /* Transición añadida */
+}
+
+.contact:hover {
+    transform: scale(1.1); /* Efecto de escala al hacer hover */
+}
+
+.message-container {
+    position: fixed;
+    top: 8rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    padding: 0 1rem;
+    text-align: center;
+}
+
+.message-img {
+    width: 100%;
+    height: auto;
+}
+
+.derek-container {
+    position: fixed;
+    top: 18rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+}
+
+.derek-img {
+    width: 100%;
+    height: auto;
+}
+
+.earth-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 450px;
+    overflow: visible;
+    z-index: 1;
+}
+
+.earth {
+    position: absolute;
+    bottom: 0rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    height: auto;
+    max-width: 80%;
+    z-index: 1;
+}
+
+.btn {
+    position: absolute;
+    left: 50%;
+    bottom: 10%; 
+    transform: translateX(-50%);
+    z-index: 2;
+    width: 220px;
+    height: 160px;
+}
+
+.enter {
+    position: fixed;
+    left: 3%;
+    bottom: 2rem; 
+    z-index: 2;
+    width: 75px;
+    height: 100px;
+}
+
+.scroll {
+    position: fixed;
+    right: 4rem;
+    bottom: 2rem;
+    z-index: 2;
+    width: 75px;
+    height: 100px;
+   }
+
+.flecha {
+    position: absolute;
+    right: 2%;
+    top: 45%;
+    transform: translateX(-50%);
+    z-index: 2;
+    width: 50px;
+    height: 102px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.flecha:hover {
+    transform: translateX(-50%) scale(1.1); 
+}
+
+.flecha1 {
+    position: absolute;
+    left: 4%;
+    top: 45%;
+    transform: translateX(-50%);
+    z-index: 2;
+    width: 50px;
+    height: 102px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.flecha1:hover {
+    transform: translateX(-50%) scale(1.1); 
+}
+
+.text-container {
+    position: absolute;
+    bottom: 9%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    width: 71%;
+    max-width: 550px;  
+    text-align: center;
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(1rem, 1.5vw, 1.4rem);
+}
+
+.txt {
+    margin-bottom: 1.5rem;
+}
+
+.txt1 {
+    color: #FFFFFF;
+    font-weight: bold;
+    display: inline-block;
+    transition: transform 0.3s ease; /* Transición añadida para el texto */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el texto */
+}
+
+.txt1:hover {
+    transform: scale(1.1); /* Efecto de escala al hacer hover */
+    color: #a0a0ff; /* Cambio de color opcional para mejor feedback */
+}
+
+.btn-container {
+    position: absolute;
+    left: 50%;
+    bottom: 3%;
+    transform: translateX(-50%);
+    z-index: 2;
+    width: 80%;
+    max-width: 800px;
+    height: 17rem;
+}
+
+.btn {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .contact {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+  }
+
+  .message-container, .derek-container {
+    max-width: 250px;
+  }
+
+  .btn-container {
+    max-width: 250px;
+  }
+
+  .flecha, .flecha1 {
+    width: 30px;
+  }
+
+  .enter, .scroll {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+
+
+  .txt {
+    margin-bottom: 310px;
+    font-size: 11px;
+    max-width: 90%;
+    margin-left: 16px;
+  }
+  .earth {
+    width: 100%;
+  }
+  .message-container {
+    max-width: 250px;
+  }
+
+  .derek-container {
+    max-width: 160px;
+  }
+
+  .btn-container {
+    max-width: 320px;
+    margin-bottom: 250px;
+  }
+
+ .flecha1 {
+    width: 22px;
+  }
+
+   .flecha {
+    width: 20px;
+   }
+
+   .git {
+    width: 22px;
+   }
+
+}
