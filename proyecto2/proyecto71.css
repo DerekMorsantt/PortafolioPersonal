@@ -145,6 +145,9 @@ body::after {
     transform: translateX(-50%) scale(1.1); 
 }
 
+.lista {
+    color: white;
+}
 .flecha1 {
     position: absolute;
     left: 4%;
